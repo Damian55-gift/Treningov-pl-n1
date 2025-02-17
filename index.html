@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tréningový plán</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 20px;
+            min-height: 70px;
+            border-bottom: #77aadd 3px solid;
+        }
+        header h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 24px;
+        }
+        .training-section {
+            background: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .exercise-list {
+            display: none;
+            padding-top: 10px;
+        }
+        h2 {
+            color: #333;
+        }
+    </style>
+    <script>
+        function toggleExercises(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === "none") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Tréningový plán</h1>
+    </header>
+    <div class="container">
+        <div class="training-section" onclick="toggleExercises('monday-exercises')">
+            <h2>Pondelok - Kardio a Core</h2>
+            <p>30 minút behu + 15 minút posilňovania brucha</p>
+            <div class="exercise-list" id="monday-exercises">
+                <h3>Bez pomôcok</h3>
+                <ul>
+                    <li>Beh vonku</li>
+                    <li>Šprinty</li>
+                    <li>Plank</li>
+                    <li>Ruské otáčky</li>
+                    <li>Bicyklové skracovačky</li>
+                </ul>
+                <h3>So zariadením</h3>
+                <ul>
+                    <li>Beh na páse</li>
+                    <li>Švihadlo</li>
+                    <li>Bicyklový trenažér</li>
+                    <li>Veslovací trenažér</li>
+                    <li>Core rotácie na stroji</li>
+                </ul>
+            </div>
+        </div>
+        <div class="training-section" onclick="toggleExercises('tuesday-exercises')">
+            <h2>Utorok - Horná časť tela</h2>
+            <p>Tréning zameraný na ruky, hrudník a ramená</p>
+            <div class="exercise-list" id="tuesday-exercises">
+                <h3>Bez pomôcok</h3>
+                <ul>
+                    <li>Kliky</li>
+                    <li>Tricepsové kľuky</li>
+                    <li>Plank s výdržou</li>
+                    <li>Ramenové kruhy</li>
+                    <li>Diamantové kliky</li>
+                </ul>
+                <h3>So zariadením</h3>
+                <ul>
+                    <li>Bench press</li>
+                    <li>Ramenné tlaky s činkami</li>
+                    <li>Bicepsové zdvihy</li>
+                    <li>Tricepsové extenzie s lanom</li>
+                    <li>Hrudníkové rozpažovanie s jednoručkami</li>
+                </ul>
+            </div>
+        </div>
+        <div class="training-section" onclick="toggleExercises('wednesday-exercises')">
+            <h2>Streda - Silový tréning</h2>
+            <p>Celotelový tréning s činkami</p>
+            <div class="exercise-list" id="wednesday-exercises">
+                <h3>Bez pomôcok</h3>
+                <ul>
+                    <li>Drepy</li>
+                    <li>Výpady</li>
+                    <li>Mostík</li>
+                    <li>Skoky na mieste</li>
+                    <li>Zdvíhanie nôh v ľahu</li>
+                </ul>
+                <h3>So zariadením</h3>
+                <ul>
+                    <li>Mŕtvy ťah</li>
+                    <li>Farmárska chôdza s kettlebellom</li>
+                    <li>Drepy s činkou</li>
+                    <li>Leg press</li>
+                    <li>Hip thrust s činkou</li>
+                </ul>
+            </div>
+        </div>
+        <div class="training-section" onclick="toggleExercises('thursday-exercises')">
+            <h2>Štvrtok - Funkčný tréning</h2>
+            <p>Kombinácia výbušnosti a vytrvalosti</p>
+            <div class="exercise-list" id="thursday-exercises">
+                <h3>Bez pomôcok</h3>
+                <ul>
+                    <li>Burpees</li>
+                    <li>Horolezci</li>
+                    <li>Dynamické drepy</li>
+                    <li>Výskoky z drepu</li>
+                    <li>Boxerské údery do vzduchu</li>
+                </ul>
+                <h3>So zariadením</h3>
+                <ul>
+                    <li>Kettlebell swing</li>
+                    <li>Box jumps</li>
+                    <li>Lanové švihy</li>
+                    <li>Battle ropes</li>
+                    <li>TRX cviky</li>
+                </ul>
+            </div>
+        </div>
+        <div class="training-section" onclick="toggleExercises('friday-exercises')">
+            <h2>Piatok - Flexibilita a mobilita</h2>
+            <p>Jóga a strečing</p>
+            <div class="exercise-list" id="friday-exercises">
+                <h3>Bez pomôcok</h3>
+                <ul>
+                    <li>Psa hlavou dole</li>
+                    <li>Motýlik</li>
+                    <li>Hlboký drep</li>
+                    <li>Mačací chrbát</li>
+                    <li>Twistovanie trupu</li>
+                </ul>
+                <h3>So zariadením</h3>
+                <ul>
+                    <li>Strečing s odporovou gumou</li>
+                    <li>Foam rolling</li>
+                    <li>Jóga bloky</li>
+                    <li>Masážna guľa</li>
+                    <li>Stretch band rotácie</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
